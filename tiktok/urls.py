@@ -6,5 +6,5 @@ from tiktok import views
 urlpatterns = [
     path('', views.home),
     path('admin/', admin.site.urls),
-    # path('merchants/', include('Merchant_Management.urls')),
+    path('merchants/', include('Merchant_Management.urls')),
 ]

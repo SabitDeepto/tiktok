@@ -107,7 +107,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
@@ -121,11 +121,9 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-
-# Add these new lines
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
