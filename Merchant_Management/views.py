@@ -1,11 +1,14 @@
 from django.shortcuts import render
 
 from Merchant_Management.forms import MerchantForm
+from Merchant_Management.models import CreateMerchant
 
 
 def merchant_list(request):
     template = 'merchants/Marchant_List.html'
-    return render(request, template)
+    all_merchant = CreateMerchant.objects.order_by('-id')
+    context = {'list': all_merchant}
+    return render(request, template, context)
 
 
 def create_merchant(request):

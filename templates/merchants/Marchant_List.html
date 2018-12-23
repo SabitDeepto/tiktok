@@ -33,79 +33,33 @@
                       </thead>
 
                       <tbody>
+                      {% for list in list %}
                         <tr>
                           <td class="nowrap">
-                            <span class="status-pill smaller green"></span><span>1</span>
+                            <span class="status-pill smaller green"></span><span>{{ list.pk }}</span>
                           </td>
-                          <td>Sarowar</td>
+                          <td>{{list.firstName}}</td>
                           <td class="cell-with-media">
-                            <img alt="" src="{% static 'img/company1.png' %}" style="height: 25px;"><span>Banana Shakes LLC</span>
+                            <img alt="" src="{% static 'img/company1.png' %}" style="height: 25px;"><span>{{ list.business_name }}</span>
                           </td>
                           <td class="text-center">
-                            <a class="badge badge-success" href="">01719131305</a>
+                            <a class="badge badge-success" href="">{{  list.phone }}</a>
                           </td>
                           <td class="text-right bolder nowrap">
-                             <span class="text-success">nipuswe@gmail.com</span>
+                             <span class="text-success">{{list.email}}</span>
                           </td>
                           <td class="text-right bolder nowrap">
-                             <span class="text-success">12/12/2018</span>
+                             <span class="text-success">{{list.dob}}</span>
                           </td>
                           <td class="text-right bolder nowrap">
-                             <span class="text-success">Dhaka</span>
+                             <span class="text-success">{{list.address}}</span>
                           </td>
                           <td class="row-actions">
                              <a href="#"><i class="os-icon os-icon-ui-49"></i></a><a href="#"><i class="os-icon os-icon-grid-10"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
                           </td>
                         </tr>
-                        <tr>
-                          <td class="nowrap">
-                            <span class="status-pill smaller red"></span><span>2</span>
-                          </td>
-                          <td>Sarowar</td>
-                          <td class="cell-with-media">
-                            <img alt="" src="{% static 'img/company1.png' %}" style="height: 25px;"><span>Banana Shakes LLC</span>
-                          </td>
-                          <td class="text-center">
-                            <a class="badge badge-success" href="">01678814219</a>
-                          </td>
-                          <td class="text-right bolder nowrap">
-                             <span class="text-success">nipuswe@gmail.com</span>
-                          </td>
-                          <td class="text-right bolder nowrap">
-                             <span class="text-success">12/12/2018</span>
-                          </td>
-                          <td class="text-right bolder nowrap">
-                             <span class="text-success">Dhaka</span>
-                          </td>
-                          <td class="row-actions">
-                             <a href="#"><i class="os-icon os-icon-ui-49"></i></a><a href="#"><i class="os-icon os-icon-grid-10"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="nowrap">
-                            <span class="status-pill smaller green"></span><span>2</span>
-                          </td>
-                          <td>Sarowar</td>
-                          <td class="cell-with-media">
-                            <img alt="" src="{% static 'img/company1.png' %}" style="height: 25px;"><span>Banana Shakes LLC</span>
-                          </td>
-                          <td class="text-center">
-                            <a class="badge badge-success" href="">01678814219</a>
-                          </td>
-                          <td class="text-right bolder nowrap">
-                             <span class="text-success">nipuswe@gmail.com</span>
-                          </td>
-                          <td class="text-right bolder nowrap">
-                             <span class="text-success">12/12/2018</span>
-                          </td>
-                          <td class="text-right bolder nowrap">
-                             <span class="text-success">Dhaka</span>
-                          </td>
-                          <td class="row-actions">
-                            <a href="#"><i class="typcn typcn-arrow-minimise-outline"></i></a>
-                             <a href="#"><i class="os-icon os-icon-ui-49"></i></a><a href="#"><i class="os-icon os-icon-grid-10"></i></a><a class="danger" href="#"><i class="os-icon os-icon-ui-15"></i></a>
-                          </td>
-                        </tr>
+                      {% endfor %}
+
                       </tbody>
                     </table>
                   </div>
